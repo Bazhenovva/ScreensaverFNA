@@ -35,7 +35,6 @@ namespace ScreensaverFNA.Constants
         /// </summary>
         internal const int MediumRandSize = 30;
 
-
         /// <summary>
         /// Нижняя граница начальной позиции (верх экрана)
         /// </summary>

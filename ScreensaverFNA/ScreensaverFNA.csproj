@@ -76,6 +76,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Пост-билд: копирование нативных библиотек FNA -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y /d "$(ProjectDir)fnalibs\x64\*.dll" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>xcopy /y /d "$(ProjectDir)fnalibs\dlls\*.dll" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
