@@ -58,7 +58,7 @@
   </ItemGroup>
   <!-- MGCB файл -->
   <ItemGroup>
-    <None Include="Content.mgcb">
+    <None Include="Content\Content.mgcb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

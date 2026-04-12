@@ -8,7 +8,7 @@ using ScreensaverFNA.Models;
 namespace ScreensaverFNA
 {
     /// <summary>
-    /// Игра снегопад — отображает падающие снежинки
+    /// снегопад — отображает падающие снежинки
     /// </summary>
     internal class SnowfallGame : Game
     {
@@ -29,9 +29,9 @@ namespace ScreensaverFNA
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = GameConstants.ScreenWidth;
-            graphics.PreferredBackBufferHeight = GameConstants.ScreenHeight;
-            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            graphics.IsFullScreen = true;
 
             IsMouseVisible = false;
             Window.AllowUserResizing = false;
@@ -48,7 +48,7 @@ namespace ScreensaverFNA
         }
 
         /// <summary>
-        /// Загрузка контента — текстур и ресурсов
+        /// Загрузка контента
         /// </summary>
         protected override void LoadContent()
         {
@@ -137,12 +137,14 @@ namespace ScreensaverFNA
         private void ResetSnowFlake(int index)
         {
             var randomSize = rand.Next(SnowflakeConstants.MinRandSize, SnowflakeConstants.MaxRandSize);
+
             var speed = randomSize <= SnowflakeConstants.MediumRandSize ?
                 SnowflakeConstants.MinSpeed : SnowflakeConstants.MaxSpeed;
+
             var scale = (float)randomSize / snowflakeTexture.Width;
 
             snowflakes[index].X = rand.Next(GraphicsDevice.Viewport.Width);
-            snowflakes[index].Y = rand.Next(SnowflakeConstants.LessPositionY, SnowflakeConstants.MorePositionY);
+            snowflakes[index].Y = rand.Next(-GraphicsDevice.Viewport.Height, SnowflakeConstants.SpawnTopY);
             snowflakes[index].Speed = speed;
             snowflakes[index].Scale = scale;
         }

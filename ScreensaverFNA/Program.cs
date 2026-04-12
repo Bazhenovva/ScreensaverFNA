@@ -1,8 +1,10 @@
 using System;
-using Microsoft.Xna.Framework;
 
 namespace ScreensaverFNA
 {
+    /// <summary>
+    /// Точка входа в приложение
+    /// </summary>
     internal static class Program
     {
         [STAThread]

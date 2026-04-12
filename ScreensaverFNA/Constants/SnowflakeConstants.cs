@@ -8,17 +8,17 @@ namespace ScreensaverFNA.Constants
         /// <summary>
         /// Общее количество снежинок на экране
         /// </summary>
-        internal const int CountSnowFlakes = 500;
+        internal const int CountSnowFlakes = 1000;
 
         /// <summary>
         /// Минимальная скорость падения
         /// </summary>
-        internal const int MinSpeed = 3;
+        internal const int MinSpeed = 1;
 
         /// <summary>
         /// Максимальная скорость падения
         /// </summary>
-        internal const int MaxSpeed = 6;
+        internal const int MaxSpeed = 4;
 
         /// <summary>
         /// Минимальный размер снежинки
@@ -28,21 +28,17 @@ namespace ScreensaverFNA.Constants
         /// <summary>
         /// Максимальный размер снежинки
         /// </summary>
-        internal const int MaxRandSize = 51;
+        internal const int MaxRandSize = 50;
 
         /// <summary>
         /// Средний размер для определения скорости
         /// </summary>
-        internal const int MediumRandSize = 35;
+        internal const int MediumRandSize = 30;
+
 
         /// <summary>
-        /// Верхняя граница появления снежинки
+        /// Нижняя граница начальной позиции (верх экрана)
         /// </summary>
-        internal const int LessPositionY = -100;
-
-        /// <summary>
-        /// Нижняя граница начальной позиции
-        /// </summary>
-        internal const int MorePositionY = 0;
+        internal const int SpawnTopY = 0;
     }
 }
