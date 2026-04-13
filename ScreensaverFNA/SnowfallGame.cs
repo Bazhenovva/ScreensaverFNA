@@ -87,7 +87,6 @@ namespace ScreensaverFNA
         /// </summary>
         protected override void Draw(GameTime gameTime)
         {
-            // GraphicsDevice.Clear(Color.Black);
 
             spriteBatch.Begin();
 
